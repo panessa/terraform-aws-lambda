@@ -982,6 +982,7 @@ def install_poetry_dependencies(query, path):
     poetry_lock_file = os.path.join(path, "poetry.lock")
     pyproject_file = os.path.join(path, "pyproject.toml")
     # pyproject.toml is always required by poetry, poetry.lock is optional and can be created from pyproject.toml
+    poetry_toml_file = os.path.join(path, "poetry.toml")
     if not os.path.exists(pyproject_file):
         yield
         return
@@ -1032,7 +1033,7 @@ def install_poetry_dependencies(query, path):
 
         poetry_lock_target_file = copy_file_to_target(poetry_lock_file, temp_dir)
         pyproject_target_file = copy_file_to_target(pyproject_file, temp_dir)
-
+        poetry_toml_target_file = copy_file_to_target(poetry_toml_file, temp_dir)
         poetry_exec = "poetry"
         subproc_env = None
 
@@ -1086,6 +1087,7 @@ def install_poetry_dependencies(query, path):
             # FIXME: not really needed as only the content of a subdirectory is exposed
             os.remove(poetry_lock_target_file)
             os.remove(pyproject_target_file)
+            os.remove(poetry_toml_target_file)
 
             yield os.path.join(temp_dir, ".venv/lib/", runtime, "site-packages")
 
