@@ -36,7 +36,9 @@ Note that this example may create resources which cost money. Run `terraform des
 | <a name="module_lambda_function_from_package"></a> [lambda\_function\_from\_package](#module\_lambda\_function\_from\_package) | ../../ |  |
 | <a name="module_lambda_layer"></a> [lambda\_layer](#module\_lambda\_layer) | ../../ |  |
 | <a name="module_lambda_layer_pip_requirements"></a> [lambda\_layer\_pip\_requirements](#module\_lambda\_layer\_pip\_requirements) | ../.. |  |
+| <a name="module_lambda_layer_poetry"></a> [lambda\_layer\_poetry](#module\_lambda\_layer\_poetry) | ../../ |  |
 | <a name="module_package_dir"></a> [package\_dir](#module\_package\_dir) | ../../ |  |
+| <a name="module_package_dir_poetry"></a> [package\_dir\_poetry](#module\_package\_dir\_poetry) | ../../ |  |
 | <a name="module_package_dir_without_pip_install"></a> [package\_dir\_without\_pip\_install](#module\_package\_dir\_without\_pip\_install) | ../../ |  |
 | <a name="module_package_file"></a> [package\_file](#module\_package\_file) | ../../ |  |
 | <a name="module_package_file_with_pip_requirements"></a> [package\_file\_with\_pip\_requirements](#module\_package\_file\_with\_pip\_requirements) | ../../ |  |
